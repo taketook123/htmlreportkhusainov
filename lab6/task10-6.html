@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="title">
+      <img class="kpi" src="../images/kpi-symbol.png" alt="" />
+      <div class="title-text">
+        <p>
+          звіти з лабораторних робіт <br />
+          з дисципліни "web-орієнтовані технології. основи frontend та backend
+          розробок"
+        </p>
+        <p>Студент групи ІО-11 <span>Хусаінов Дмитро</span></p>
+      </div>
+      <img class="kpi" src="../images/aphoto.jpg" alt="" />
+    </header>
+    <main>
+      <div class="labs">
+        <a href="1lab.html" class="lab">Лаба №1</a>
+        <a href="../lab2/2lab.html" class="lab">Лаба №2</a>
+        <a href="../lab3/3lab.html" class="lab">Лаба №3</a>
+        <a href="../lab4/4lab.html" class="lab">Лаба №4</a>
+        <a href="../lab5/5lab.html" class="lab">Лаба №5</a>
+        <a href="6lab.html" class="lab">Лаба №6</a>
+        <a href="#" class="lab">Лаба №7</a>
+        <a href="#" class="lab">Лаба №8</a>
+      </div>
+      <div class="labs-content">
+        <div class="list">
+          <a href="topic-aim.html" class="list-item">Постановка задачі ЛР6</a>
+          <a href="task1-51.html" class="list-item">ЛР5.1. Задача 1</a>
+          <a href="task3-51.html" class="list-item">ЛР5.1. Задача 3</a>
+          <a href="task5-51.html" class="list-item">ЛР5.1. Задача 5</a>
+          <a href="task7-51.html" class="list-item">ЛР5.1. Задача 7</a>
+          <a href="task9-51.html" class="list-item">ЛР5.1. Задача 9</a>
+          <a href="task10-51.html" class="list-item">ЛР5.1. Задача 10</a>
+          
+          <a href="task1-6.html" class="list-item">ЛР6. Задача 1</a>
+          <a href="task3-6.html" class="list-item">ЛР6. Задача 3</a>
+          <a href="task5-6.html" class="list-item">ЛР6. Задача 5</a>
+          <a href="task7-6.html" class="list-item">ЛР6. Задача 7</a>
+          <a href="task8-6.html" class="list-item">ЛР6. Задача 8</a>
+          <a href="task9-6.html" class="list-item">ЛР6. Задача 9</a>
+          <a href="task10-6.html" class="list-item">ЛР6. Задача 10</a>
+          <a href="conclusions.html" class="list-item">Висновки</a>
+        </div>
+        <div class="list-content">
+          <h4>ЛР6 завдання 10</h4>
+          <p>
+    Напиши скрипт створення й очищення колекції елементів з наступним функціоналом.
+Є input, у який користувач вводить бажану кількість елементів. Після натискання на кнопку Create має рендеритися (додаватися в DOM) колекція з відповідною кількістю елементів і очищатися значення в інпуті. При повторному натисканні на кнопку Create поверх старої колекції має рендеритись нова. Після натискання на кнопку Destroy колекція елементів має очищатися.
+	</p>
+	<pre>
+	 const button = document.getElementById('myButton');
+
+	    button.addEventListener('click', () => {
+	      alert('Ви натиснули кнопку!');
+	    });
+	</pre>
+	<div id="controls">
+          <input type="number" min="1" max="100" step="1" />
+          <button type="button" data-create>Create</button>
+          <button type="button" data-destroy>Destroy</button>
+        </div>
+        
+        <div id="boxes"></div>
+        
+	  <script>
+        function getRandomHexColor() {
+          return `#${Math.floor(Math.random() * 16777215)
+            .toString(16)
+            .padStart(6, 0)}`;
+        }
+        
+        function createBoxes(amount) {
+          const boxesContainer = document.querySelector('#boxes');
+          boxesContainer.innerHTML = '';
+        
+          for (let i = 0; i < amount; i++) {
+            const box = document.createElement('div');
+            box.style.width = `${30 + i * 10}px`;
+            box.style.height = `${30 + i * 10}px`;
+            box.style.backgroundColor = getRandomHexColor();
+            boxesContainer.appendChild(box);
+          }
+        }
+        
+        function destroyBoxes() {
+          document.querySelector('#boxes').innerHTML = '';
+        }
+        
+        document.querySelector('[data-create]').addEventListener('click', function() {
+          const input = document.querySelector('input[type="number"]');
+          const amount = input.value;
+        
+          if (amount < 1 || amount > 100) {
+            alert('Введіть число від 1 до 100');
+            return;
+          }
+        
+          createBoxes(amount);
+          input.value = '';
+        });
+        
+        document.querySelector('[data-destroy]').addEventListener('click', destroyBoxes);
+        
+      </script>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,193 @@
+body {
+  background-color: #f0f4f9;
+}
+
+a {
+  text-decoration: none;
+  color: #070808;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+a:active,
+a:focus,
+a:hover {
+  color: #376392;
+  background-color: transparent;
+}
+
+.title {
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.title p:first-child {
+  text-transform: uppercase;
+}
+
+.title p {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+
+.title span {
+  text-decoration: underline;
+}
+
+.kpi {
+  height: 70px;
+  width: 70px;
+}
+
+.title-text {
+  margin-left: auto;
+  margin-right: auto;
+  flex-grow: 1;
+}
+
+.labs {
+  border: 1px solid #ddd;
+  display: flex;
+  padding: 5px;
+  justify-content: space-around;
+  flex-basis: auto;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  padding: 15px 0;
+  margin-bottom: 10px;
+}
+
+.labs-content {
+  display: flex;
+  height: 800px;
+}
+
+.lab {
+  border: 1px solid #ddd;
+  padding: 0 60px;
+}
+
+.list {
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 15px;
+  max-width: 400px;
+  max-height: 300px;
+  width: 100%;
+  margin-right: 15px;
+}
+
+.list-item {
+  border: 1px solid #ddd;
+  flex: 2 1 auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+.list-item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.list-content {
+  border: 1px solid #ddd;
+  flex-grow: 1;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  height: 1000px;
+  padding: 10px 15px 0 15px;
+}
+
+.list-content h3 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+
+.list-content h3:first-child {
+  margin-bottom: 10px;
+}
+
+.list-content p {
+  font-family: "Open Sans", sans-serif;
+}
+
+CSS
+
+.list-content a:hover,
+a:focus,
+a:active {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.git {
+  text-decoration: underline;
+}
+
+.list-content li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.list-content ul:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.list-content .elements {
+  text-align: center;
+}
+
+td:not(:last-child) {
+  width: 15%;
+}
+
+#id {
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 5px 0 5px 5px;
+}
+
+td:first-child {
+  text-align: center;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .table-container {
+    width: 100%;
+    overflow-x: scroll;
+  }
+}
+
+#lab6-place {
+    width: 200px;
+    height: 100px;
+    background-color: green;
+    margin: 20px auto;
+}
+
+.lab6-result {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+

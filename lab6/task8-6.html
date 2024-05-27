@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="title">
+      <img class="kpi" src="../images/kpi-symbol.png" alt="" />
+      <div class="title-text">
+        <p>
+          звіти з лабораторних робіт <br />
+          з дисципліни "web-орієнтовані технології. основи frontend та backend
+          розробок"
+        </p>
+        <p>Студент групи ІО-11 <span>Хусаінов Дмитро</span></p>
+      </div>
+      <img class="kpi" src="../images/aphoto.jpg" alt="" />
+    </header>
+    <main>
+      <div class="labs">
+        <a href="1lab.html" class="lab">Лаба №1</a>
+        <a href="../lab2/2lab.html" class="lab">Лаба №2</a>
+        <a href="../lab3/3lab.html" class="lab">Лаба №3</a>
+        <a href="../lab4/4lab.html" class="lab">Лаба №4</a>
+        <a href="../lab5/5lab.html" class="lab">Лаба №5</a>
+        <a href="6lab.html" class="lab">Лаба №6</a>
+        <a href="#" class="lab">Лаба №7</a>
+        <a href="#" class="lab">Лаба №8</a>
+        <a href="#" class="lab">Лаба №9</a>
+      </div>
+      <div class="labs-content">
+        <div class="list">
+          <a href="topic-aim.html" class="list-item">Постановка задачі ЛР6</a>
+          <a href="task1-51.html" class="list-item">ЛР5.1. Задача 1</a>
+          <a href="task3-51.html" class="list-item">ЛР5.1. Задача 3</a>
+          <a href="task5-51.html" class="list-item">ЛР5.1. Задача 5</a>
+          <a href="task7-51.html" class="list-item">ЛР5.1. Задача 7</a>
+          <a href="task9-51.html" class="list-item">ЛР5.1. Задача 9</a>
+          <a href="task10-51.html" class="list-item">ЛР5.1. Задача 10</a>
+          
+          <a href="task1-6.html" class="list-item">ЛР6. Задача 1</a>
+          <a href="task3-6.html" class="list-item">ЛР6. Задача 3</a>
+          <a href="task5-6.html" class="list-item">ЛР6. Задача 5</a>
+          <a href="task7-6.html" class="list-item">ЛР6. Задача 7</a>
+          <a href="task8-6.html" class="list-item">ЛР6. Задача 8</a>
+          <a href="task9-6.html" class="list-item">ЛР6. Задача 9</a>
+          <a href="task10-6.html" class="list-item">ЛР6. Задача 10</a>
+          <a href="conclusions.html" class="list-item">Висновки</a>
+        </div>
+        <div class="list-content">
+          <h4>ЛР6 Завдання 8:</h4>
+          <p>
+    Напиши скрипт управління формою логіна.
+    1. Обробка відправлення форми form.login-form повинна відбуватися за подією submit.
+    2. Під час відправлення форми сторінка не повинна перезавантажуватися.
+    3. Якщо при сабміті у формі є незаповнені поля, виводь alert з попередженням про те, що 'All form fields must be filled in'. Не додавай на інпути атрибут required, валідація має відбуватися саме через JS.
+    4. Якщо користувач заповнив усі поля і відправив форму, збери значення полів в об'єкт з двома властивостями, де ключ — це ім'я інпутів, а значення — відповідні значення цих інпутів, очищені від пробілів по краях. Для доступу до елементів форми використовуй властивість elements.
+    5. При сабміті форми виведи об'єкт із введеними даними в консоль і очисти значення полів форми методом reset.
+	</p>
+	<pre>
+	document.querySelector('.login-form').addEventListener('submit', function(event) {
+	event.preventDefault();
+      
+	var email = event.target.elements.email.value.trim();
+	var password = event.target.elements.password.value.trim();
+      
+	if (!email || !password) {
+	  alert('All form fields must be filled in');
+	  return;
+	}
+      
+	let formData = {
+	  email: email,
+	  password: password
+	};
+      
+	console.log(formData);
+      
+	event.target.reset();
+      });
+	</pre>
+	<p>Виконання коду</p>
+	
+	<h2>Виконання 8 завдання</h2>
+         <form class="login-form">
+          <label>
+            Email
+            <input type="email" name="email" />
+          </label>
+          <label>
+            Password
+            <input type="password" name="password" />
+          </label>
+          <button type="submit">Log in</button>
+        </form>
+
+
+    <script>
+      document.querySelector('.login-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+      
+        var email = event.target.elements.email.value.trim();
+        var password = event.target.elements.password.value.trim();
+      
+        if (!email || !password) {
+          alert('All form fields must be filled in');
+          return;
+        }
+      
+        let formData = {
+          email: email,
+          password: password
+        };
+      
+        console.log(formData);
+      
+        event.target.reset();
+      });
+      
+    </script>
+      </div>
+    </main>
+  </body>
+</html>
